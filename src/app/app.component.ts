@@ -13,7 +13,6 @@ export class AppComponent implements OnInit{
   gender:string;
   profession:string;
   knowFor:string;
-  status:number;
 
   constructor( private GetUserService:GetUserService ) {}
 
@@ -21,23 +20,18 @@ export class AppComponent implements OnInit{
     this.getUser();
   }
 
-  handleClick() {
-    this.getUser();
-  }
-
   getUser() {
     this.GetUserService
     .getUser()
     .subscribe((response:IUserResponse) => {
-      console.log('Hola');
-      const {results} = response;
-      const [data] = results;
-      const {name,gender,profession,knowFor,status}:IUser = data;
+      console.log(response);
+      const {data} = response;
+      console.log(data.name);
+      const {name,gender,profession,knowFor}:IUser = data;
       this.name = `${name.first} ${name.last}`;
       this.gender = gender;
       this.profession = profession;
       this.knowFor = knowFor;
-      this.status = status;
     })
   }
 }
