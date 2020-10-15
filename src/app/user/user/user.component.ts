@@ -10,7 +10,6 @@ export class UserComponent implements OnInit {
   @Input() gender:string;
   @Input() profession:string;
   @Input() knowFor:string;
-  @Input() status:number;
 
   constructor() { }
 

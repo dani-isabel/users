@@ -1,8 +1,16 @@
-<h1>User Info</h1>
-<div>
-    <h2>{{ name }}</h2>
-    <p> Gender: {{ gender }}</p>
-    <p> Profession: {{ profession }}</p>
-    <p> knowFor: {{ knowFor }}</p>
-    <p> status: {{ status}}</p>
-</div>
+<h1>{{name}}</h1>
+<div class="card mb-3" style="max-width: 80%;">
+    <div class="userInfo row no-gutters">
+      <div class="col-md-4">
+        <img src="https://miro.medium.com/max/4410/1*sNCAThm5_uiYEGW-jQVhWg.jpeg" class="card-img" alt={{name}}>
+      </div>
+      <div class="cardInfo col-md-8">
+        <div class="card-body">
+          <h2 class="card-title">{{ name }}</h2>
+          <p class="card-text"><span class="bold">Gender:</span> {{ gender }}</p>
+          <p class="card-text"><span class="bold">Profession:</span> {{ profession }}</p>
+          <p class="card-text"><span class="bold">Know for:</span> {{ knowFor }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
